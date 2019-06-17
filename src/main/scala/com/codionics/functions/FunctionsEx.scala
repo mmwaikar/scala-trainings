@@ -1,6 +1,6 @@
 package com.codionics.functions
 
-trait FunctionEx {
+trait FunctionsEx {
 
   // single line function
   def multiplyByTwo(n: Int) = n * 2
@@ -13,7 +13,7 @@ trait FunctionEx {
   def addThree(n: Int): Int = n + 3
 
   // for functions which do not return anything (void in Java), the return type is Unit
-  def sayHello(name: String): Unit = s"Hello, $name!"
+  def sayHello(name: String): Unit = println(s"Hello, $name!")
 
   // the above is an example of string interpolation (even ES6 has this feature called template strings)
 
@@ -22,7 +22,7 @@ trait FunctionEx {
     // multi-line functions should be wrapperd in curly braces {}
 
     /**
-      * NOTE: one big difference is, that the below if condition return a value, so it
+      * NOTE: one big difference is, that the below if condition returns a value, so it
       * is an expression, whereas in Java, it is a statement
       */
     if (gender == "M")
