@@ -1,4 +1,4 @@
-package com.codionics.functions
+package com.codionics.day1.functions
 
 trait FunctionsEx {
 
