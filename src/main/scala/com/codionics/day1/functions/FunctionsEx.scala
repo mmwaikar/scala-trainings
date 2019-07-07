@@ -40,4 +40,19 @@ trait FunctionsEx {
   * So, instead of having 3-4 different overloaded functions, have a single function
   * with multiple default arguments.
   */
+
+  val list = Seq(1, 2, 3, 4)
+
+  // here, x => x * 2 is an anonymous function
+  val doubled = list.map(x => x * 2)
+
+  def getMinMax(a: Int, b: Int): Unit = {
+
+    // nested functions
+    def getMin = if (a < b) a else b
+    def getMax = if (a > b) a else b
+
+    println(s"Min of $a, $b is: $getMin")
+    println(s"Max of $a, $b is: $getMax")
+  }
 }
