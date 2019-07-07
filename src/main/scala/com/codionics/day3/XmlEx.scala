@@ -4,8 +4,9 @@ import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
 import com.codionics.day3.xmlprocessing.{Address, Customer, Item, PurchaseOrder}
+import com.codionics.Utils._
 
-import scala.xml.Elem
+import scala.xml.{Elem, NodeBuffer}
 
 object XmlEx extends App {
 
@@ -31,8 +32,8 @@ object XmlEx extends App {
     PurchaseOrder(orderDate, customer1, customer2, "Hurry, my lawn is going wild!", Seq(item1, item2))
   }
 
-  private def getPOXml(po: PurchaseOrder) = {
-    <purchaseOrder orderDate={ getDateStr(po.orderDate) }>
+  private def getPOXml(po: PurchaseOrder): Elem = {
+    <purchaseOrder orderDate={ po.orderDate.toFormat("yyyy-MM-dd") }>
       <shipTo country={po.shipTo.country}>{ getCustomerXml(po.shipTo) }</shipTo>
       <billTo country={po.billTo.country}>{ getCustomerXml(po.billTo) }</billTo>
       <comment>{po.comment}</comment>
@@ -40,7 +41,7 @@ object XmlEx extends App {
     </purchaseOrder>
   }
 
-  private def getCustomerXml(customer: Customer) = {
+  private def getCustomerXml(customer: Customer): NodeBuffer = {
     <name>{customer.name}</name>
     <street>{customer.address.street}</street>
     <city>{customer.address.city}</city>
