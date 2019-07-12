@@ -51,4 +51,15 @@ object BasicEx {
   // For example, in the documentation of the StringOps class, you will find a method def apply(n: Int): Char
   // That is, "Hello"(4) is a shortcut for "Hello".apply(4)
   // We will encounter this method with relation to case class as well.
+
+  /* Lazy values */
+
+  // When a val is declared as lazy, its initialization is deferred until it
+  // is accessed for the first time. For example,
+  lazy val words = scala.io.Source.fromFile("/usr/share/dict/words").mkString
+
+  // If the program never accesses words, the file is never opened. To verify
+  // this, try it out in the REPL, but misspell the file name. There will be
+  // no error when the initialization statement is executed. However, when you
+  // access words, you will get an error message that the file is not found.
 }

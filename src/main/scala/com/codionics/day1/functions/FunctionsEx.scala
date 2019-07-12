@@ -2,7 +2,10 @@ package com.codionics.day1.functions
 
 trait FunctionsEx {
 
-  // single line function
+  // You must specify the types of all parameters. However, as long as the
+  // function is not recursive, you need not specify the return type.
+
+  // single line function (no need for a return keyword)
   def multiplyByTwo(n: Int) = n * 2
 
   // can also be written as
@@ -17,9 +20,17 @@ trait FunctionsEx {
 
   // the above is an example of string interpolation (even ES6 has this feature called template strings)
 
+  // If the body of the function requires more than one expression, use a block.
+  // The last expression of the block becomes the value that the function returns.
+
+  // with a recursive function, you must specify the return type
+  def fac(n: Int): Int = if (n <= 0) 1 else n * fac(n - 1)
+
+  /* Default and named arguments */
+
   // functions can have default arguments
   def greet(name: String, gender: String = "M") = {
-    // multi-line functions should be wrapperd in curly braces {}
+    // multi-line functions should be wrapped in a block (i.e. curly braces {})
 
     /**
       * NOTE: one big difference is, that the below if condition returns a value, so it
@@ -32,19 +43,49 @@ trait FunctionsEx {
   }
 
   /**
-  * The above is an example of an overloaded function - it can be called as -
-  *
-  * greet("Manoj"), or
-  * greet("Piya", "F")
-  *
-  * So, instead of having 3-4 different overloaded functions, have a single function
-  * with multiple default arguments.
-  */
+    * The above is an example of an overloaded function - it can be called as -
+    *
+    * greet("Manoj"), or
+    * greet("Piya", "F")
+    *
+    * So, instead of having 3-4 different overloaded functions, have a single function
+    * with multiple default arguments.
+    *
+    * If you supply fewer arguments than there are parameters, the defaults are applied from the end.
+    */
 
-  val list = Seq(1, 2, 3, 4)
+  // You can also specify the parameter names when you supply the arguments. For ex,
+  val g = greet(gender = "F", name = "Johnny")
+
+  // Note that the named arguments need not be in the same order as the parameters (as shown above).
+  // You can mix unnamed and named arguments, provided the unnamed ones come first:
+  greet("Jimmy", gender = "X")
+
+  /* Variable arguments */
+
+  def sum(args: Int*) = {
+    var result = 0
+
+    for (arg <- args) result += arg
+      result
+  }
+
+  // we can call it with any number of arguments
+  val six = sum(1, 2, 3)
+  val ten = sum(1, 2, 3, 4)
+
+  // so what if we already have a sequence of values?
+  val seq = Seq(1, 2, 3, 4, 5)
+
+  // we can't directly pass a sequence to the above function, so below is not allowed
+  // val fifteen = sum(seq)
+
+  // The remedy is to tell the compiler that you want the parameter to be
+  // considered an argument sequence. Append : _*, like this:
+  val fifteen = sum(seq: _*)
 
   // here, x => x * 2 is an anonymous function
-  val doubled = list.map(x => x * 2)
+  val doubled = seq.map(x => x * 2)
 
   def getMinMax(a: Int, b: Int): Unit = {
 
