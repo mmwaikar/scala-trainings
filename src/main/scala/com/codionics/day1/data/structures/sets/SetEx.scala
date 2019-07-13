@@ -1,4 +1,4 @@
-package com.codionics.day2.sets
+package com.codionics.day1.data.structures.sets
 
 import scala.collection.immutable.SortedSet
 import scala.collection.mutable

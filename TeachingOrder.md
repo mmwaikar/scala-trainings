@@ -3,17 +3,19 @@
 ## Day 1
 
  - Basics
- - Arrays
- - Lists
- - Maps
- - Sets
+ - Data structures
+    - Arrays
+    - Lists
+    - Maps
+    - Sets
  - Functions
- - HOFs
+    - HOFs
  - Traits
  - Objects
 
 ## Day 2
 
+ - Either / Option / Try
  - Classes
  - Inheritance
  - Pattern matching

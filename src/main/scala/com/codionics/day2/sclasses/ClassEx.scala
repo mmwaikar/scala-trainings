@@ -1,4 +1,4 @@
-package com.codionics.day1.sclasses
+package com.codionics.day2.sclasses
 
 import scala.beans.BeanProperty
 import scala.collection.mutable.ArrayBuffer

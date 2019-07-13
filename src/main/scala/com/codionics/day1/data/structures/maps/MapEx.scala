@@ -1,4 +1,4 @@
-package com.codionics.day2.maps
+package com.codionics.day1.data.structures.maps
 
 import java.util
 

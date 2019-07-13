@@ -1,4 +1,4 @@
-package com.codionics.day2.arrays
+package com.codionics.day1.data.structures.arrays
 
 import scala.collection.mutable.ArrayBuffer
 

@@ -1,4 +1,4 @@
-package com.codionics.day2.lists
+package com.codionics.day1.data.structures.lists
 
 object SeqEx {
 
