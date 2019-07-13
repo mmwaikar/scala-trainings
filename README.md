@@ -116,6 +116,7 @@ Material for training on Scala language.
 30, 90, **15**, 30, 60, **45**, 90, 45, **15**, 90, 45, 90, 45, 90, 90, 45, 120, 45, 120
 
 Extra time (per day) - Lunch (45 mins) + 2 Tea breaks (30 mins) = 01:15
+Total hands on Labs - 255 mins (4 hrs. 15 mins.)
 ---
 
 
