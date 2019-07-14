@@ -2,6 +2,11 @@
 
 ## Day 1
 
+ - Introduction to Scala
+   - REPL
+   - Worksheets
+   - sbt
+   
  - Basics
  - Data structures
     - Arrays
