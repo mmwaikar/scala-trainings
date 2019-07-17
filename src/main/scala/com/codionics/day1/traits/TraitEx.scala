@@ -253,7 +253,7 @@ class AnotherException extends IOException with LoggedException
 
 // However, if our class extends an unrelated class, then it is not possible to mix in the trait.
 // For example, you cannot form the following class:
-class UnhappyFrame extends JFrame with LoggedException
+//class UnhappyFrame extends JFrame with LoggedException
 
 // we get the error - illegal inheritance; superclass JFrame is not a subclass
 // of the superclass Exception of the mixin trait LoggedException
