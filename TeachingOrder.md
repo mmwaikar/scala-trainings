@@ -10,6 +10,8 @@
  - Basics
  - Functions
     - HOFs
+    - Currying
+    - Call by name
  - Data structures
     - Arrays
     - Lists
