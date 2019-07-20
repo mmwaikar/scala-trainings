@@ -175,6 +175,7 @@ object FuturesEx {
   val usdQuote = Future { connection.getCurrentValue(USD) }
   val chfQuote = Future { connection.getCurrentValue(CHF) }
 
+  var amount = 0
   val purchase: Future[Int] = for {
     usd <- usdQuote
     chf <- chfQuote
@@ -188,7 +189,7 @@ object FuturesEx {
   // The purchase future is completed only once both usdQuote and chfQuote are completed – it depends on
   // the values of both these futures so its own computation cannot begin earlier. The for-comprehension
   // above is translated into:
-  val purchase = usdQuote flatMap {
+  val purchase1 = usdQuote flatMap {
     usd =>
       chfQuote
         .withFilter(chf => connection.isProfitable(usd, chf))
