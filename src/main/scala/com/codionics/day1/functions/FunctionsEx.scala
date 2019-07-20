@@ -84,7 +84,13 @@ trait FunctionsEx {
   // considered an argument sequence. Append : _*, like this:
   val fifteen = sum(seq: _*)
 
-  // here, x => x * 2 is an anonymous function
+  // on the RHS is an anonymous function, which has been stored in a variable called timesThree
+  val timesThree: Double => Double = (x: Double) => x * 3
+
+  // we don't have to store it in a variable, we can directly pass it to a function
+  val tripled = seq.map((x: Int) => x * 3)
+
+  // another short way to write an anonymous function, notice, the type is inferred from the type of the seq
   val doubled = seq.map(x => x * 2)
 
   def getMinMax(a: Int, b: Int): Unit = {

@@ -8,13 +8,13 @@
    - sbt
    
  - Basics
+ - Functions
+    - HOFs
  - Data structures
     - Arrays
     - Lists
     - Maps
     - Sets
- - Functions
-    - HOFs
  - Traits
  - Objects
 
