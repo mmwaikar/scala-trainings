@@ -41,6 +41,7 @@ are good with the basic stuff, you can move on to other advanced books.
     - Case classes
     
  - Exceptions
+ - Annotations (not used very often)
  - Using standard Java libraries
 
 ### Day 3

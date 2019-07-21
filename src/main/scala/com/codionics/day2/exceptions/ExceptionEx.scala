@@ -1,9 +1,9 @@
-package com.codionics.day2
+package com.codionics.day2.exceptions
 
 import java.io.{IOException, InputStream}
 import java.net.{MalformedURLException, URL}
 
-import scala.math._
+import scala.math.sqrt
 
 object ExceptionEx {
 

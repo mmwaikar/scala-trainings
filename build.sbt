@@ -10,7 +10,9 @@ lazy val root = (project in file("."))
     name := "ScalaTraining",
     libraryDependencies ++= Seq(
       scalaXml,
-      
+
+      hibernate,
+      jUnit,
       scalaTest % Test
     ) 
   )
