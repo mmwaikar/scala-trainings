@@ -1,14 +1,13 @@
-package com.codionics.day3
+package com.codionics.day3.xmlprocessing
 
+import java.io.FileInputStream
 import java.time.LocalDate
-import java.time.format.DateTimeFormatter
 
-import com.codionics.day3.xmlprocessing.{Address, Customer, Item, PurchaseOrder}
 import com.codionics.Utils._
 
-import scala.xml.{Elem, NodeBuffer}
+import scala.xml.{Elem, NodeBuffer, XML}
 
-object XmlEx extends App {
+object XmlExPO extends App {
 
   val sampleXml = getSampleXml
   println(sampleXml.toString())
@@ -20,6 +19,14 @@ object XmlEx extends App {
     val po = getPO
     getPOXml(po)
   }
+
+  // save as an XML file
+  val xmlFileName = "PurchaseOrder.xml"
+  XML.save(xmlFileName, poXml, enc = "UTF-8", xmlDecl = true)
+
+  // load an XML file
+  val poXmlFromFile = XML.load(new FileInputStream(xmlFileName))
+  println(s"PO XML from file: ${poXmlFromFile.toString()}")
 
   private def getPO: PurchaseOrder = {
     val item1 = Item("872-AA", "Lawnmower", 1, 148.95, Option("Confirm this is electric"))
@@ -66,10 +73,10 @@ object XmlEx extends App {
     </item>
   }
 
-  private def getDateStr(d: LocalDate): String = {
-    val yyyyMMddFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd")
-    d.format(yyyyMMddFormat)
-  }
+//  private def getDateStr(d: LocalDate): String = {
+//    val yyyyMMddFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd")
+//    d.format(yyyyMMddFormat)
+//  }
 
   def getSampleXml: Elem = {
     val page =
@@ -85,44 +92,3 @@ object XmlEx extends App {
     page
   }
 }
-
-/*
-
-<?xml version="1.0"?>
-<purchaseOrder orderDate="1999-10-20">
-  <shipTo country="US">
-    <name>Alice Smith</name> <street>123 Maple Street</street>
-    <city>Mill Valley</city> <state>CA</state> <zip>90952</zip>
-  </shipTo>
-  <billTo country="US">
-    <name>Robert Smith</name> <street>8 Oak Avenue</street>
-    <city>Old Town</city> <state>PA</state> <zip>95819</zip>
-  </billTo>
-  <comment>Hurry, my lawn is going wild!</comment>
-  <items>
-    <item partNum="872-AA">
-      <productName>Lawnmower</productName> <quantity>1</quantity>
-      <USPrice>148.95</USPrice> <comment>Confirm this is electric</comment>
-    </item>
-    <item partNum="926-AA">
-      <productName>Baby Monitor</productName> <quantity>1</quantity>
-    <USPrice>39.98</USPrice> <shipDate>1999-05-21</shipDate>
-    </item>
-  </items>
-</purchaseOrder>
-
- */
-
-/*
-
-<html>
-  <head>
-    <title>Hello XHTML world</title>
-  </head>
-  <body>
-    <h1>Hello world</h1>
-    <p><a href="http://scala-lang.org/">Scala</a> talks XHTML</p>
-  </body>
-</html>
-
- */
