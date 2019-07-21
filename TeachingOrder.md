@@ -25,14 +25,14 @@ are good with the basic stuff, you can move on to other advanced books.
     - Lists
     - Maps
     - Sets
-    
- - Traits
- 
- - Objects
 
 ### Day 2
 
  - Either / Option / Try
+ 
+ - Traits
+  
+ - Objects
  
  - Classes
     - Inheritance
@@ -55,6 +55,6 @@ are good with the basic stuff, you can move on to other advanced books.
 
 ### Day 4
 
- - Akka, actors (not yet done)
- - DSLs (not yet done)
+ - Akka, actors
+ - DSLs
  - Exam, clarification of doubts (not yet done)

@@ -1,4 +1,4 @@
-package com.codionics.day1.objects
+package com.codionics.day2.objects
 
 // In Java or C++, you often have a class with both instance methods and static methods.
 // In Scala, you achieve this by having a class and a “companion” object of the same name.

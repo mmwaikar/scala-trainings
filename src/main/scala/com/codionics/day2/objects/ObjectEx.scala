@@ -1,4 +1,4 @@
-package com.codionics.day1.objects
+package com.codionics.day2.objects
 
 object ObjectEx {
 

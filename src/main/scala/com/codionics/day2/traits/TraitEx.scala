@@ -1,4 +1,4 @@
-package com.codionics.day1.traits
+package com.codionics.day2.traits
 
 import java.io.{IOException, PrintWriter}
 import java.util.Date
