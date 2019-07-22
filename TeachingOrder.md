@@ -8,6 +8,8 @@ are good with the basic stuff, you can move on to other advanced books.
 
 ### Day 1
 
+ - JVM, Java and its problems
+ 
  - Introduction to Scala
    - REPL
    - Worksheets
