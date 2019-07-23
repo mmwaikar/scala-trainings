@@ -8,25 +8,25 @@ are good with the basic stuff, you can move on to other advanced books.
 
 ### Day 1
 
- - JVM, Java and its problems
+ - JVM, Java and its problems (d)
  
  - Introduction to Scala
-   - REPL
-   - Worksheets
-   - sbt
+   - REPL (d)
+   - Worksheets (d)
+   - sbt (console, clean, compile, run, test, testOnly)
    
- - Basics
+ - Basics (d)
  
  - Functions
-    - HOFs
-    - Currying
-    - Call by name
+    - HOFs (d)
+    - Currying (d)
+    - Call by name (d)
     
  - Data structures
-    - Arrays
-    - Lists
-    - Maps
-    - Sets
+    - Arrays (d)
+    - Lists (d)
+    - Maps (d)
+    - Sets (d)
 
 ### Day 2
 
@@ -43,6 +43,7 @@ are good with the basic stuff, you can move on to other advanced books.
     - Case classes
     
  - Exceptions
+ - Implicits
  - Annotations (not used very often)
  - Using standard Java libraries
 
@@ -60,3 +61,6 @@ are good with the basic stuff, you can move on to other advanced books.
  - Akka, actors
  - DSLs
  - Exam, clarification of doubts (not yet done)
+ 
+ niceguest
+ nice2haveyou!
