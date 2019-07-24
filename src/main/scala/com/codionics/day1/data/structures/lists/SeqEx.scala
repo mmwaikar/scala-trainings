@@ -61,4 +61,23 @@ object SeqEx {
 
   // a range (from 0, 1, ... 9)
   val rangeExcludingLast = 0 until 10
+
+  // partition
+  val (even, odd) = seq.partition(_ % 2 == 0) // instead of filter and filterNot
+
+  // minBy / maxBy
+  seq.minBy(Math.abs) // instead of seq.sortBy(Math.abs).head
+
+  // splitAt
+  val (left, right) = seq.splitAt(3) // instead of take(3) and drop(3)
+
+  // grouped - grouped(n) splits the collection into collections with n elements each
+  // (the last one may contain less than n elements, depending on the size of the original collection)
+  seq.grouped(3).toList // List(List(1,2,3), List(4,5,6), List(7,8,9), List(10))
+
+  // count
+  seq.count(_ % 2 == 0)
+
+  // exists
+  seq.exists(_ % 42 == 0)
 }

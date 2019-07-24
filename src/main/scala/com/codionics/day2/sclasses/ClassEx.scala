@@ -231,7 +231,7 @@ object ClassEx {
     class Inner {}
   }
 
-  // The class Network { outer => syntax makes the variable outer refer to
-  // Network.this. You can choose any name for this variable. The name self
+  // The class PersonRef { outer => syntax makes the variable outer refer to
+  // PersonRef.this. You can choose any name for this variable. The name self
   // is common, but perhaps confusing when used with nested classes.
 }
