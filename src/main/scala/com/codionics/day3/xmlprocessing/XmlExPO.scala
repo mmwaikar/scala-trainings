@@ -10,23 +10,44 @@ import scala.xml.{Elem, NodeBuffer, XML}
 object XmlExPO extends App {
 
   val sampleXml = getSampleXml
-  println(sampleXml.toString())
+//  println(sampleXml.toString())
 
   val poXml = getPOXml
-  println(poXml.toString())
+//  println(poXml.toString())
 
   def getPOXml: Elem = {
     val po = getPO
     getPOXml(po)
   }
 
+  def getAllProductNames(poXml: Elem): Seq[String] = {
+    val productNameTags = poXml \ "items" \\ "productName"
+    productNameTags.map(_.text)
+  }
+
+  def getAllProductNamesAsString(poXml: Elem) = getAllProductNames(poXml).mkString(", ")
+
+  def getPriceFor(poXml: Elem, partNum: String) = {
+    val itemTags = poXml \ "items" \\ "item"
+    itemTags.find(x => (x \ "@partNum").text == partNum).map(y => (y \ "USPrice").text)
+  }
+
+  def getPartNum(item: Elem) = {
+    item \ "partNum"
+  }
+
+  val partNumToFind = "872-AA" // 926-AA
+  println(s"product names: ${getAllProductNames(poXml)}")
+  println(s"product names (as str): ${getAllProductNamesAsString(poXml)}")
+  println(s"price for partNum: ${getPriceFor(poXml, partNumToFind)}")
+
   // save as an XML file
   val xmlFileName = "PurchaseOrder.xml"
-  XML.save(xmlFileName, poXml, enc = "UTF-8", xmlDecl = true)
+//  XML.save(xmlFileName, poXml, enc = "UTF-8", xmlDecl = true)
 
   // load an XML file
   val poXmlFromFile = XML.load(new FileInputStream(xmlFileName))
-  println(s"PO XML from file: ${poXmlFromFile.toString()}")
+//  println(s"PO XML from file: ${poXmlFromFile.toString()}")
 
   private def getPO: PurchaseOrder = {
     val item1 = Item("872-AA", "Lawnmower", 1, 148.95, Option("Confirm this is electric"))

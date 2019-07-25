@@ -65,7 +65,7 @@ object XmlEx {
 
   val list =
     <dl><dt>Java</dt><dd>Gosling</dd><dt>Scala</dt><dd>Odersky</dd></dl>
-  val languages = list \\ "dt"
+  val languages = list \ "dt"
 
   // A wildcard matches any element. For example,
   doc \ "body" \ "_" \ "li"
