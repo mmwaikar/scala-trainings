@@ -30,37 +30,58 @@ are good with the basic stuff, you can move on to other advanced books.
 
 ### Day 2
 
- - Either / Option / Try
+ - Either / Option / Try (d)
  
- - Traits
+ - Traits (d)
   
- - Objects
+ - Objects (d)
  
- - Classes
-    - Inheritance
+ - Classes (d)
  
  - Pattern matching
-    - Case classes
+    - Case classes (d)
     
- - Exceptions
- - Implicits
- - Annotations (not used very often)
+ - Packages (d)
+ - Exceptions (d)
+ 
  - Using standard Java libraries
+ - Linearization (discuss later)
 
 ### Day 3
 
- - XML
+ - Inheritance (d)
+ - Implicits (d)
+ - Annotations (not used very often) (d)
+ - XML (d)
  
- - Concurrency
-    - Futures (incomplete)
- 
- - TDD / BDD (ScalaTest / JUnit)
+ - TDD / BDD (ScalaTest / JUnit) (d)
 
 ### Day 4
 
+ - Concurrency
+     - Futures (incomplete)
+     
  - Akka, actors
  - DSLs
  - Exam, clarification of doubts (not yet done)
+ 
+ 
+ #### Extras
+ 
+  - DRY
+  - REST APIs
+  - DDD
+  - ORM
+  - Refactoring
+ 
+ 
+ ### Participants
+ 
+ Shalaka, Anusha, Akshara
+ Anant, Akshay, Arshad, Vedant, Jeffy
+ Shubham, Mrunal, Sayali
+ 
+ ### Credentials
  
  niceguest
  nice2haveyou!

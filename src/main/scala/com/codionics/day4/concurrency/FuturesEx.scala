@@ -1,6 +1,7 @@
 package com.codionics.day4.concurrency
 
-import scala.concurrent.{ExecutionContext, Future}
+import scala.concurrent.{Await, ExecutionContext, Future}
+import scala.concurrent.duration._
 import scala.util.{Failure, Success}
 //import scala.concurrent.ExecutionContext.Implicits.global
 
@@ -95,10 +96,16 @@ object FuturesEx {
    * ExecutionContext.global sets the parallelism level of its underlying fork-join pool to the number
    * of available processors (Runtime.availableProcessors).
    */
-  val indianPlayers = Seq("Virat", "Rahul", "Rohit")
+  val indianPlayers: Seq[String] = Seq("Virat", "Rahul", "Rohit")
 
   // suppose we are getting this list from the DB or calling an API
-  val futurePlayers = Future { indianPlayers } // Future.apply method is called
+  val futurePlayers: Future[Seq[String]] = Future { indianPlayers } // Future.apply method is called
+
+  /* Blocking */
+
+  // the Await method which should not be used (because then we are defeating the purpose of using
+  // futures - because it's a blocking call (and if we can block, then why use futures in the first place?)
+  val players: Seq[String] = Await.result(futurePlayers, 3 millis)
 
   /* Callbacks */
 
@@ -195,7 +202,4 @@ object FuturesEx {
         .withFilter(chf => connection.isProfitable(usd, chf))
         .map(chf => connection.buy(amount, chf))
   }
-
-  // the Await method which should not be used (because then we are defeating the purpose of using
-  // futures - because it's a blocking call (and if we can block, then why use futures in the first place?
 }
