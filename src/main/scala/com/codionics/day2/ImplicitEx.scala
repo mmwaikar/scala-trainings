@@ -14,6 +14,16 @@ import java.time.LocalDate
 
 object ImplicitEx {
 
+  /* Implicit parameters */
+
+  def getName(firstName: String, lastName: String)(implicit title: String): String = {
+    s"$title. $firstName $lastName"
+  }
+
+  implicit val title = "Mr"
+  val name = getName("Rohit", "Sharma")
+  val name1 = getName("Rohini", "Sharma")("Ms")
+
   /* Implicit conversions */
 
   // An implicit function is a function with a single parameter that is
