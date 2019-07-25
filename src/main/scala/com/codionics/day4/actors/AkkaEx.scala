@@ -1,6 +1,15 @@
 package com.codionics.day4.actors
 
 /*
+ * The Reactive Manifesto - https://www.reactivemanifesto.org/
+ *
+ * Responsive     : The system responds in a timely manner if at all possible.
+ * Resilient      : The system stays responsive in the face of failure.
+ * Elastic        : The system stays responsive under varying workload.
+ * Message Driven : Reactive Systems rely on asynchronous message-passing to establish
+ *                  a boundary between components that ensures loose coupling, isolation
+ *                  and location transparency.
+ *
  * https://akka.io/try-akka/
  *
  * Akka is a toolkit for building highly concurrent, distributed, and resilient
@@ -40,4 +49,19 @@ package com.codionics.day4.actors
  */
 object AkkaEx {
 
+  /*
+   * Messages - Messages can be of arbitrary type (any subtype of Any). Case classes and case
+   * objects make excellent messages since they are immutable and have support for pattern matching.
+   *
+   * Actors - In Akka you can’t create an instance of an Actor using the new keyword. Instead, you
+   * create Actor instances using a factory. The factory does not return an actor instance, but a
+   * reference, akka.actor.ActorRef, that points to the actor instance. This level of indirection
+   * adds a lot of power and flexibility in a distributed system.
+   *
+   * Asynchronous communication - Actors are reactive and message driven. An Actor doesn’t do anything
+   * until it receives a message. Actors communicate using asynchronous messages.
+   *
+   * ActorSystem - is a factory and it acts as a container for Actors and manages their life-cycles.
+   *
+   */
 }

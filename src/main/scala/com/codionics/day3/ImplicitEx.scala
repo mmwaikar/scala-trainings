@@ -1,16 +1,6 @@
-package com.codionics.day2
+package com.codionics.day3
 
 import java.time.LocalDate
-
-/* Implicits */
-
-// Implicit conversions are used to convert between types.
-// You must import implicit conversions so that they are in scope as single identifiers.
-// An implicit parameter list requests objects of a given type. They can be obtained from implicit objects
-// that are defined as single identifiers in scope, or from the companion object of the desired type.
-// If an implicit parameter is a single-argument function, it is also used as an implicit conversion.
-// A context bound of a type parameter requires the existence of an implicit object of the given type.
-// If it is possible to locate an implicit object, this can serve as evidence that a type conversion is valid.
 
 object ImplicitEx {
 

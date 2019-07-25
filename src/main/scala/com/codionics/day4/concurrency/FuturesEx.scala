@@ -1,4 +1,4 @@
-package com.codionics.day3.concurrency
+package com.codionics.day4.concurrency
 
 import scala.concurrent.{ExecutionContext, Future}
 import scala.util.{Failure, Success}
@@ -195,4 +195,7 @@ object FuturesEx {
         .withFilter(chf => connection.isProfitable(usd, chf))
         .map(chf => connection.buy(amount, chf))
   }
+
+  // the Await method which should not be used (because then we are defeating the purpose of using
+  // futures - because it's a blocking call (and if we can block, then why use futures in the first place?
 }
