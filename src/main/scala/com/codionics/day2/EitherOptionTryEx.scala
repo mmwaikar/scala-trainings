@@ -2,7 +2,7 @@ package com.codionics.day2
 
 import scala.util.{Failure, Success, Try}
 
-object EitherOptionTryEx {
+object EitherOptionTryEx extends App {
 
   case class Employee(id: Int, name: String)
   val employees = getEmployees
@@ -23,9 +23,9 @@ object EitherOptionTryEx {
   printEmployee(leftEmployee)
 
   val noExceptionEmployee = getExceptionalById(foundId)
-  val exceptionEmployee = getExceptionalById(notFoundId)
-
   printEmployee(noExceptionEmployee)
+
+  val exceptionEmployee = getExceptionalById(notFoundId)
   printEmployee(exceptionEmployee)
 
   /*
@@ -61,6 +61,7 @@ object EitherOptionTryEx {
    */
   def getExceptionalById(id: Int): Try[Employee] = {
     val optEmployee = employees.find(_.id == id)
+    println(s"optEmployee: $optEmployee")
 
     // simpler and idiomatic way of dealing with an option value
     optEmployee.map(e => Try(e)).getOrElse(throw new Exception(s"Employee by id: $id not found in the DB."))
@@ -69,7 +70,7 @@ object EitherOptionTryEx {
   def printEmployee(optEmployee: Option[Employee]): Unit = {
     // another tedious way of dealing with an option value
     optEmployee match {
-      case Some(e) => println(s"Found employee: $e")
+      case Some(e) => println(s"Found employee (option): $e")
       case None => println(s"Employee by id: $notFoundId not found in the DB.")
     }
   }
@@ -78,15 +79,15 @@ object EitherOptionTryEx {
     // a tedious way of dealing with an either value
     eitherEmployee match {
       case Left(errorStr) => println(s"Not found reason: $errorStr.")
-      case Right(emp) => println(s"Found employee: $emp")
+      case Right(emp) => println(s"Found employee (either): $emp")
     }
   }
 
   def printEmployee(tryEmployee: Try[Employee]): Unit = {
     // a tedious way of dealing with a try value
     tryEmployee match {
+      case Success(emp) => println(s"Found employee (try): $emp")
       case Failure(e) => println(s"Some exception occurred: ${e.getMessage}.")
-      case Success(emp) => println(s"Found employee: $emp")
     }
   }
 
