@@ -32,10 +32,6 @@ object XmlExPO extends App {
     itemTags.find(x => (x \ "@partNum").text == partNum).map(y => (y \ "USPrice").text)
   }
 
-  def getPartNum(item: Elem) = {
-    item \ "partNum"
-  }
-
   val partNumToFind = "872-AA" // 926-AA
   println(s"product names: ${getAllProductNames(poXml)}")
   println(s"product names (as str): ${getAllProductNamesAsString(poXml)}")
