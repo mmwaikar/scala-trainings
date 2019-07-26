@@ -33,3 +33,11 @@
  - [ZIO](https://zio.dev/)
  - [FP-TS](https://github.com/gcanti/fp-ts)
  
+ 
+# Combinations of languages which can be used for Backend / Frontend development
+
+ - Scala    / ScalaJS
+ - Clojure  / ClojureScript
+ - F#       / Fable (a compiler)
+ - Haskell  / Purescript
+ 
