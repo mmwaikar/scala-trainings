@@ -25,6 +25,7 @@
 
  - [Extreme Programming explained](https://www.amazon.in/Extreme-Programming-Explained-Embrace-Change/dp/0321278658) (by Kent Beck)
  - [Hibernate in Action](https://www.manning.com/books/hibernate-in-action) (by Christian Bauer and Gavin King)
+ - [Domain Modeling Made Functional](https://pragprog.com/book/swdddf/domain-modeling-made-functional) - for F#
  
 ## A few important libraries for Scala / other languages
 

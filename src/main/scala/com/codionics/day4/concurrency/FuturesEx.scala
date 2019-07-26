@@ -3,6 +3,7 @@ package com.codionics.day4.concurrency
 import scala.concurrent.{Await, ExecutionContext, Future}
 import scala.concurrent.duration._
 import scala.util.{Failure, Success}
+import scala.language.postfixOps
 //import scala.concurrent.ExecutionContext.Implicits.global
 
 // Assume we have an API for interfacing with a currency trading service.
