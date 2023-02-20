@@ -2,5 +2,9 @@
 *.log
 
 .bloop/
+.idea/
 .metals/
+.vscode/
+
+project/project/
 target/
