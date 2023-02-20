@@ -81,7 +81,3 @@ are good with the basic stuff, you can move on to other advanced books.
  Anant, Akshay, Arshad, Vedant, Jeffy
  Shubham, Mrunal, Sayali
  
- ### Credentials
- 
- niceguest
- nice2haveyou!
