@@ -8,72 +8,68 @@ are good with the basic stuff, you can move on to other advanced books.
 
 ### Day 1
 
- - JVM, Java and its problems
+- JVM, Java and its problems
  
- - Introduction to Scala
+- Introduction to Scala
    - REPL
    - Worksheets
    - sbt (console, clean, compile, run, test, testOnly)
    
- - Basics
+- Basics
  
- - Functions
-    - HOFs
-    - Currying
-    - Call by name
+- Functions
+   - HOFs
+   - Currying
+   - Call by name
     
- - Data structures
-    - Arrays
-    - Lists
-    - Maps
-    - Sets
+- Data structures
+   - Arrays
+   - Lists
+   - Maps
+   - Sets
 
 ### Day 2
 
- - Either / Option / Try
- 
- - Traits
+- Either / Option / Try
+
+- Traits
   
- - Objects
+- Objects
  
- - Classes
+- Classes
  
- - Pattern matching
-    - Case classes
+- Pattern matching
+   - Case classes
     
- - Packages
- - Exceptions
+- Packages
+- Exceptions
  
- - Using standard Java libraries
- - Linearization (discuss later)
+- Using standard Java libraries
+- Linearization (discuss later)
 
 ### Day 3
 
- - Inheritance
- - Implicits
- - Annotations (not used very often)
- - XML
+- Inheritance
+- Implicits
+- Annotations (not used very often)
+- XML
  
- - TDD / BDD (ScalaTest / JUnit)
+- TDD / BDD (ScalaTest / JUnit)
 
 ### Day 4
 
- - Concurrency
-     - Futures (incomplete)
+- Concurrency
+   - Futures (incomplete)
      
- - Akka, actors
- - DSLs
- - Exam, clarification of doubts (not yet done)
+- Exam, clarification of doubts (not yet done)
  
+#### Extras
  
- #### Extras
- 
-  - DRY
-  - REST APIs
-  - DDD
-  - ORM
-  - Refactoring
- 
- 
- ### Participants
+- DRY
+- REST APIs
+- DDD
+- ORM
+- Refactoring
+
+### Participants
  
