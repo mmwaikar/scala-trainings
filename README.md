@@ -5,19 +5,15 @@ Material for training on Scala language.
 ### Day 1
 
 - JVM, Java and its problems
- 
 - Introduction to Scala
    - REPL
    - Worksheets
    - sbt (console, clean, compile, run, test, testOnly)
-   
 - Basics
- 
 - Functions
    - HOFs
    - Currying
    - Call by name
-    
 - Data structures
    - Arrays
    - Lists
@@ -27,19 +23,13 @@ Material for training on Scala language.
 ### Day 2
 
 - Either / Option / Try
-
 - Traits
-  
 - Objects
- 
 - Classes
- 
 - Pattern matching
    - Case classes
-    
 - Packages
 - Exceptions
- 
 - Using standard Java libraries
 
 ### Day 3
@@ -48,7 +38,6 @@ Material for training on Scala language.
 - Implicits
 - Annotations (not used very often)
 - XML
- 
 - TDD / BDD (ScalaTest / JUnit)
 
 ### Day 4
