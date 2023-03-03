@@ -45,7 +45,6 @@ are good with the basic stuff, you can move on to other advanced books.
 - Exceptions
  
 - Using standard Java libraries
-- Linearization (discuss later)
 
 ### Day 3
 
@@ -60,8 +59,10 @@ are good with the basic stuff, you can move on to other advanced books.
 
 - Concurrency
    - Futures (incomplete)
-     
-- Exam, clarification of doubts (not yet done)
+
+### Day 5
+
+- Exam, clarification of doubts
  
 #### Extras
  
